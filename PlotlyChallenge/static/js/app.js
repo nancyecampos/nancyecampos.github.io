@@ -1,7 +1,7 @@
 // function to build out plots
 function Plot(id) {
   // pull in data from json file (not in the same folder, specify file path)
-  d3.json("../samples.json").then((data)=> {
+  d3.json("samples.json").then((data)=> {
       console.log(data)
 
       var washfreq = data.metadata.map(d => d.washfreq)
@@ -82,7 +82,7 @@ function Plot(id) {
 // function to pull in data
 function Info(id) {
   // read the json file to get data
-  d3.json("../samples.json").then((data)=> {
+  d3.json("samples.json").then((data)=> {
       
       // get the metadata info for the demographic panel
       var metadata = data.metadata;
