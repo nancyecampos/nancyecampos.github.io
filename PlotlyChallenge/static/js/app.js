@@ -7,22 +7,21 @@ function Plot(id) {
       var washfreq = data.metadata.map(d => d.washfreq)
       console.log(`Washing Frequency: ${washfreq}`)
       
+      // filter samples id id
       var samples = data.samples.filter(s => s.id.toString() === id)[0];
       
       console.log(samples);
 
       // Filter out the top 10
-      var samplevalue = samples.sample_values.slice(0, 10).reverse();
+      var samplevalues = samples.sample_values.slice(0, 10).reverse();
       var OTU_topten = (samples.otu_ids.slice(0, 10)).reverse();
       var OTU_id = OTU_topten.map(d => "OTU " + d)
-
-    //   console.log(`OTU IDS: ${OTU_id}`)
 
 
       // get the top 10 labels for the bar plot
       var labels = samples.otu_labels.slice(0, 10);
       var trace = {
-          x: samplevalue,
+          x: samplevalues,
           y: OTU_id,
           text: labels,
           marker: {
