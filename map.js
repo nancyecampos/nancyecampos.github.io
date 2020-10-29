@@ -53,7 +53,7 @@ function createMap(kinloc) {
       renderer: myRenderer, // tell it which renderer to use to draw the circle
       color: assignColor(kinlocs.properties.Status), 
       radius: 1.0
-    }).addTo(myMap).bindPopup(`coral: ${kinlocs.properties.Status}, source: ${kinlocs.properties.Location}, number of records: ${kinlocs.properties.Status}`); // add the layer to your map
+    }).addTo(myMap).bindPopup(`Status: ${kinlocs.properties.Status}, Location: ${kinlocs.properties.Location}, Count: ${kinlocs.properties.Status}`); // add the layer to your map
   }
   console.log('done creating cases')
 }
