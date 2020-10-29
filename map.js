@@ -31,9 +31,9 @@ function createMap(kinloc) {
   // Create our map, giving it the streetmap and earthquakes layers to display on load
   var myMap = L.map("map", {
     center: [
-      37.09, -95.71
+      37.05, -75
     ],
-    zoom: 8,
+    zoom: 4,
     layers: [streetmap]
   });
   // Create a layer control
