@@ -33,7 +33,7 @@ function createMap(kinloc) {
     center: [
       37.05, -75
     ],
-    zoom: 7,
+    zoom: 6,
     layers: [streetmap]
   });
   // Create a layer control
