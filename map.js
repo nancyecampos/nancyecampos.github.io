@@ -11,9 +11,9 @@ function assignColor(kstatus){
   if (kstatus === "Open"){
     return 'green'
   }else if(kstatus === "Closed"){
-    return 'red'
+    return 'purple'
   }else{
-    return 'blue'
+    return 'orange'
   }
 }
 function createMap(kinloc) {
