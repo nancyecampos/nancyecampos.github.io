@@ -1,7 +1,7 @@
 var API_KEY = "pk.eyJ1IjoibmFuY3llY2FtcG9zIiwiYSI6ImNrNnhyYzRnYjA5YXkzbG1tOG5wOG85dHQifQ.hJIEqB5FAZZvJY44XK_dDg";
 // Store our API endpoint inside queryUrl 
 // API from mapbox
-var queryUrl = "https://raw.githubusercontent.com/nancyecampos/Kinship-Mapout/main/Kinship%20Case%20Locations2.geojson";
+var queryUrl = "https://raw.githubusercontent.com/nancyecampos/Kinship-Mapout/main/Kinship%20Case%20Locations%20Agg.geojson";
 
 // Perform a GET request to the query URL
 d3.json(queryUrl, function (data) {
@@ -53,7 +53,7 @@ function createMap(kinloc) {
       renderer: myRenderer, // tell it which renderer to use to draw the circle
       color: assignColor(kinlocs.properties.Status), 
       radius: 5.0
-    }).addTo(myMap).bindPopup(`Status: ${kinlocs.properties.Status}, Location: ${kinlocs.properties.Location}, Count: ${kinlocs.properties.Status}`); // add the layer to your map
+    }).addTo(myMap).bindPopup(`Status: ${kinlocs.properties.Status}, Location: ${kinlocs.properties.Location}, Number of Cases: ${kinlocs.properties.Count}`); // add the layer to your map
   }
   console.log('done creating cases')
 }
