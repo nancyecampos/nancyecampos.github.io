@@ -28,12 +28,12 @@ function createMap(kinloc) {
   var baseMaps = {
     "Street Map": streetmap
   };
-  // Create our map, giving it the streetmap and earthquakes layers to display on load
+  // Create our map, streetmap is the only layer
   var myMap = L.map("map", {
     center: [
       37.05, -75
     ],
-    zoom: 5,
+    zoom: 7,
     layers: [streetmap]
   });
   // Create a layer control
@@ -46,7 +46,7 @@ function createMap(kinloc) {
   // instead of a 'heavy' DOM element for the pushpins
   // the circles are rendered on their own layer at top GPU speeds
   var myRenderer = L.canvas({ padding: 0.5 }); // create the canvas 'renderer'
-  console.log('starting to create corals')
+  // console.log('starting to create cases')
   for (kinlocs of kinloc) {
     let latlon = swap(kinlocs.geometry.coordinates); // for some reason we had to swap the coords
     L.circleMarker(latlon, { // create the circle
@@ -55,7 +55,7 @@ function createMap(kinloc) {
       radius: 5.0
     }).addTo(myMap).bindPopup(`Status: ${kinlocs.properties.Status}, Location: ${kinlocs.properties.Location}, Number of Cases: ${kinlocs.properties.Count}`); // add the layer to your map
   }
-  console.log('done creating cases')
+  // console.log('done creating cases')
 }
 function swap(a){
   return [a[1], a[0]]
