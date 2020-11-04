@@ -60,4 +60,3 @@ function createMap(kinloc) {
 function swap(a){
   return [a[1], a[0]]
 }
-L.mapbox.legendControl({ position: 'topright' }).addLegend('<strong>My walk from the White House to the hill!</strong>').addTo(myMap);
