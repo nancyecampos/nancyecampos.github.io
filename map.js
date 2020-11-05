@@ -45,7 +45,7 @@ function createMap(kinloc) {
   // use a "canvas" to render the layer
   // instead of a 'heavy' DOM element for the pushpins
   // the circles are rendered on their own layer at top GPU speeds
-  var myRenderer = L.canvas({ padding: 0.9 }); // create the canvas 'renderer'
+  var myRenderer = L.canvas({ padding: 0 }); // create the canvas 'renderer'
   // console.log('starting to create cases')
   for (kinlocs of kinloc) {
     let latlon = swap(kinlocs.geometry.coordinates); // for some reason we had to swap the coords
