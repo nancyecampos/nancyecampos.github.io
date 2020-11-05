@@ -52,7 +52,7 @@ function createMap(kinloc) {
     L.circleMarker(latlon, { // create the circle
       renderer: myRenderer, // tell it which renderer to use to draw the circle
       color: assignColor(kinlocs.properties.Status), 
-      radius: 5.0
+      radius: 7.0
     }).addTo(myMap).bindPopup(`Status: ${kinlocs.properties.Status}, Location: ${kinlocs.properties.Location}, Number of Cases: ${kinlocs.properties.Count}`); // add the layer to your map
   }
   // console.log('done creating cases')
