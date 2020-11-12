@@ -26,7 +26,7 @@ function createMap(kinloc) {
     center: [
       37.43, -78.65
     ],
-    zoom: 7,
+    zoom: 5,
     layers: [streetmap]
   });
   L.control.layers(baseMaps, null, {
