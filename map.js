@@ -32,6 +32,7 @@ function createMap(kinloc) {
   L.control.layers(baseMaps, null, {
     collapsed: false
   }).addTo(myMap);
+  var myRenderer = L.canvas({ padding: 0.5 });
   for (kinlocs of kinloc) {
     let latlon = swap(kinlocs.geometry.coordinates); 
     L.circleMarker(latlon, { 
