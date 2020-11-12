@@ -26,7 +26,7 @@ function createMap(kinloc) {
     center: [
       37.43, -78.65
     ],
-    zoom: 5,
+    zoom: 7,
     layers: [streetmap]
   });
   L.control.layers(baseMaps, null, {
@@ -37,7 +37,7 @@ function createMap(kinloc) {
     L.circleMarker(latlon, { 
       renderer: myRenderer, 
       color: assignColor(kinlocs.properties.Status), 
-      radius: 1.0
+      radius: 5.0
     }).addTo(myMap).bindPopup(`Status: ${kinlocs.properties.Status}, Location: ${kinlocs.properties.Location}, Number of Cases: ${kinlocs.properties.Count}`);
   }
 }
