@@ -11,9 +11,9 @@ function assignColor(kstatus){
   if (kstatus === "Open"){
     return 'green'
   }else if(kstatus === "Permanency Achieved"){
-    return 'red'
+    return 'purple'
   }else{
-    return 'blue'
+    return 'yellow'
   }
 }
 function createMap(kinloc) {
@@ -31,9 +31,9 @@ function createMap(kinloc) {
   // Create our map, giving it the streetmap and earthquakes layers to display on load
   var myMap = L.map("map", {
     center: [
-      37.09, -95.71
+      37.43, -78.65
     ],
-    zoom: 3,
+    zoom: 5,
     layers: [streetmap]
   });
   // Create a layer control
